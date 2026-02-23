@@ -1,0 +1,77 @@
+
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  min-height: 100vh;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #007bff 0%, #6610f2 100%) !important;
+}
+.navbar-brand, .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+.navbar-brand img {
+  height: 40px;
+  margin-right: 12px;
+}
+.nav-link.active {
+  color: #ffd700 !important;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.card-title {
+  color: #007bff;
+  font-weight: bold;
+}
+.table {
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+.table-primary th {
+  background: #007bff !important;
+  color: #fff !important;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #007bff 0%, #6610f2 100%);
+  border: none;
+  color: #fff;
+  font-weight: 500;
+}
+.btn-primary:hover {
+  background: #6610f2;
+}
+.lead {
+  color: #6610f2;
+}
+a {
+  color: #007bff;
+}
+a:hover {
+  color: #6610f2;
+}
+.App-logo {
+  height: 40px;
+  margin-right: 12px;
+}
+.heading {
+  color: #007bff;
+  font-weight: bold;
+}
+.modal-content {
+  border-radius: 16px;
+  background: #f8fafc;
+}
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #007bff;
+}
+.form-label {
+  color: #6610f2;
+  font-weight: 500;
+}
