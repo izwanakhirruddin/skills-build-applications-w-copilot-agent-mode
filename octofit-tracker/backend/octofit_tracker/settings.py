@@ -25,7 +25,18 @@ SECRET_KEY = 'django-insecure-p093l@h)f8pi6#!qbj9s8*mftrw$i7au7ixyn^uo$hqsd6tqsy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+import os
+
+# Allow localhost and Codespace public URL
+codespace_name = os.environ.get('CODESPACE_NAME')
+if codespace_name:
+    ALLOWED_HOSTS = [
+        'localhost',
+        '127.0.0.1',
+        f'{codespace_name}-8000.app.github.dev',
+    ]
+else:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -137,6 +148,9 @@ CORS_ALLOW_HEADERS = ['*']
 CORS_ALLOW_METHODS = ['DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT']
 
 # Django REST Framework settings (basic)
+
+# Use custom User model
+AUTH_USER_MODEL = 'octofit_tracker.User'
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
